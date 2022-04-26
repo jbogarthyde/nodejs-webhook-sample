@@ -38,7 +38,7 @@ A tunneling solution such as [ngrock](https://ngrock.com) or [localtunnel](https
 
 As a convinence we have provided a button to deploy this sample project on Digital Ocean (an account is required).
 
-When deploying an environment varialbe can be set, `API_KEY` to designate the `x-api-key` header that must be included to authorize requests.
+When deploying an environment variable can be set, `API_KEY` to designate the `x-api-key` header that must be included to authorize requests.
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/everactive/nodejs-webhook-sample.git/tree/main)
 
@@ -50,7 +50,7 @@ Once the application is running you must register the webhook endpoint with Ever
 curl -v -X POST 'https://api.data.everactive.com/ds/v1/webhooks \
   -H `Authorization: Bearer {{access_token}}' \
   -H 'Content-Type: application/json' \
-  -d '{"callbackUrl": "https://your.sample.webhook.url", "eventType": "sensor_reading", "enabled": true, "headers": [{"key": "x-api-key", "value": "secret_key"}]}'
+  -d '{"callbackUrl": "https://[your sample webhook url]", "eventType": "sensor_reading", "enabled": true, "headers": [{"key": "x-api-key", "value": "secret_key"}]}'
 ```
 
 The request will return a webhook object including an ID value. Note the ID so you can delete the webhook subscription when done running the sample.
