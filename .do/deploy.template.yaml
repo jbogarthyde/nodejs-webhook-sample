@@ -1,0 +1,8 @@
+spec:
+  name: webhook-digitalocean-sample
+  services:
+    - name: everactive-webhook-application
+      git:
+        repo_clone_url: https://github.com/everactive/nodejs-webhook-sample.git
+        branch: main
+      dockerfile_path: Dockerfile
